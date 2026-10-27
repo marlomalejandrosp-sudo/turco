@@ -1,0 +1,52 @@
+# Miscelánea
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.build/
+.buildlog/
+.history
+.svn/
+.swiftpm/
+migrate_working_dir/
+
+# Configuración personal del IDE
+*.iml
+*.ipr
+*.iws
+.idea/
+.vscode/
+
+# Flutter / Dart
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+/build/
+/coverage/
+pubspec_overrides.yaml
+
+# Símbolos de depuración
+app.*.symbols
+app.*.map.json
+
+# Android: salidas de compilación y caché
+/android/app/debug
+/android/app/profile
+/android/app/release
+/android/.gradle/
+/android/local.properties
+/android/gradle-wrapper.jar
+/android/captures/
+/android/app/.cxx/
+**/android/GeneratedPluginRegistrant.java
+
+# Llaves de firma (NUNCA se suben)
+*.jks
+*.keystore
+key.properties
+**/android/key.properties
