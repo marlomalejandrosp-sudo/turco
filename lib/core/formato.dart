@@ -56,6 +56,14 @@ abstract final class Formato {
   static String fechaCorta(DateTime d) =>
       '${_dos(d.day)}/${_dos(d.month)}/${d.year}';
 
+  /// "19/10"
+  static String diaMes(DateTime d) => '${_dos(d.day)}/${_dos(d.month)}';
+
+  /// "mié 21 de octubre" (para el aviso de turno guardado)
+  static String fechaGuardado(DateTime d) =>
+      '${_diasCortos[d.weekday - 1].toLowerCase()} ${d.day} de '
+      '${_meses[d.month - 1]}';
+
   /// "Octubre 2026"
   static String mesAnio(DateTime d) {
     final mes = _meses[d.month - 1];

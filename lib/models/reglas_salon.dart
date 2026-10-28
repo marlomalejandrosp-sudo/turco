@@ -55,15 +55,20 @@ abstract final class ReglasSalon {
 
   /// Devuelve el mensaje de error si el horario no cumple las reglas del
   /// salón, o `null` si es válido.
+  ///
+  /// Con [permitirPasado] en true no se comprueba que la hora ya pasó. Se
+  /// usa al editar un turno sin cambiar su hora (por ejemplo, para
+  /// corregir las notas de un turno que ya empezó hoy).
   static String? errorDeHorario(
     DateTime inicio,
     int duracionMin,
-    DateTime ahora,
-  ) {
+    DateTime ahora, {
+    bool permitirPasado = false,
+  }) {
     if (!estaAbierto(inicio)) {
       return 'El salón está cerrado los domingos.';
     }
-    if (esPasado(inicio, ahora)) {
+    if (!permitirPasado && esPasado(inicio, ahora)) {
       return 'No se puede elegir una fecha y hora que ya pasaron.';
     }
     if (!esFranjaValida(inicio)) {
