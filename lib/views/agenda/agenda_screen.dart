@@ -180,7 +180,7 @@ class _AgendaScreenState extends State<AgendaScreen> {
             itemBuilder: (context, i) {
               if (i == 0) return _Cabecera(vm: vm, onElegirFecha: _elegirFecha);
               if (turnos.isEmpty) {
-                return EstadoVacio(
+                return const EstadoVacio(
                   icono: Icons.event_busy,
                   titulo: 'No hay turnos para este día',
                   mensaje:

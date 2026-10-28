@@ -150,7 +150,7 @@ class _TarjetaEstilista extends StatelessWidget {
                     Text(
                       hoy == 0
                           ? 'Sin turnos hoy'
-                          : Formato.plural(hoy, 'turno', 'turnos') + ' hoy',
+                          : '${Formato.plural(hoy, 'turno', 'turnos')} hoy',
                       style: tema.textTheme.labelSmall?.copyWith(
                         fontSize: 12,
                         fontWeight: FontWeight.w500,

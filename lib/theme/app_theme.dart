@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 /// Tema global de Turco (Material 3, claro y oscuro).
 ///
-/// Aquí vive TODO el estilo: paleta, tipografía, radios y componentes.
 /// Las pantallas no escriben colores ni medidas sueltas: leen el tema con
 /// `Theme.of(context)`.
 abstract final class AppTheme {
