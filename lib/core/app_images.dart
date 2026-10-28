@@ -1,3 +1,5 @@
+import '../models/enums.dart';
+
 /// Rutas de los recursos gráficos, para evitar errores de tipeo.
 abstract final class AppImages {
   static const logo = 'assets/images/logo.png';
@@ -15,4 +17,13 @@ abstract final class AppImages {
     'assets/images/avatar_4.png',
     'assets/images/avatar_5.png',
   ];
+
+  /// Imagen de cada categoría de servicio.
+  static String categoria(CategoriaServicio c) => switch (c) {
+        CategoriaServicio.corte => catCorte,
+        CategoriaServicio.color => catColor,
+        CategoriaServicio.barba => catBarba,
+        CategoriaServicio.peinado => catPeinado,
+        CategoriaServicio.tratamiento => catTratamiento,
+      };
 }
